@@ -7,4 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CustomDialogueTheme" parent="Theme.AppCompat.Dialog">
+        <item name="windowNoTitle">false</item>
+        <item name="background">@android:color/holo_red_light</item>
+    </style>
 </resources>

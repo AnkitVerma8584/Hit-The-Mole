@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Hit The Mole!</string>
+    <string-array name="Levels">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
 </resources>

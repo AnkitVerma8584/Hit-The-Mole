@@ -5,50 +5,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="50dp"
+    tools:ignore="HardcodedText"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/scoreBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="Score Board >" />
+
+    <TextView
         android:id="@+id/p1"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:text="Hit : 0"
+        android:layout_width="150dp"
+        android:layout_below="@+id/scoreBoard"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Hits : 0"
+        android:textStyle="bold"
         android:textSize="22sp"/>
 
     <TextView
-        android:id="@+id/p2"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:text="Attempts : 30"
+        android:id="@+id/life"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lifes :"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
         android:textSize="22sp"
         android:layout_below="@+id/p1" />
 
+    <TextView
+        android:id="@+id/p2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:text="❤❤❤❤❤"
+        android:textSize="22sp"
+        android:layout_below="@+id/p1"
+        android:layout_toEndOf="@+id/life"/>
+
+
 
     <TextView
-        android:id="@+id/miss"
-        android:layout_margin="10dp"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/p2"
-        android:textSize="22sp" />
+        android:id="@+id/time"
+        android:layout_below="@+id/start"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="30dp"
+        android:text="02:00"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-    <Button
+
+    <TextView
         android:id="@+id/btn00"
         android:background="@drawable/hole"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:text="44"
         android:layout_margin="5dp"
         android:layout_toStartOf="@+id/btn01"
         android:textSize="30sp"
         android:textColor="#00000000"
-        android:layout_above="@+id/btn10"/>
+        android:layout_above="@+id/btn10"
+         />
 
-    <Button
+    <TextView
         android:id="@+id/btn01"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_margin="5dp"
         android:textColor="#00000000"
         android:background="@drawable/hole"
@@ -58,10 +95,10 @@
         app:layout_constraintStart_toStartOf="@+id/btn00"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <TextView
         android:id="@+id/btn02"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/hole"
         android:textColor="#00000000"
         android:layout_margin="5dp"
@@ -69,21 +106,21 @@
         android:textSize="30sp"
         android:layout_above="@+id/btn12"/>
 
-    <Button
+    <TextView
         android:id="@+id/btn10"
-        android:layout_width="100dp"
         android:textColor="#00000000"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_margin="5dp"
         android:layout_above="@+id/btn20"
         android:background="@drawable/hole"
         android:textSize="30sp"
         android:layout_toStartOf="@+id/btn11"/>
 
-    <Button
+    <TextView
         android:id="@+id/btn11"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:background="@drawable/hole"
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
@@ -91,22 +128,22 @@
         android:textColor="#00000000"
         android:layout_above="@+id/btn21" />
 
-    <Button
+    <TextView
         android:id="@+id/btn12"
-        android:layout_width="100dp"
-        android:textColor="#00000000"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_margin="5dp"
         android:background="@drawable/hole"
         android:layout_above="@+id/btn22"
+        android:textColor="#00000000"
         android:textSize="30sp"
         android:layout_toEndOf="@id/btn11"/>
 
 
-    <Button
+    <TextView
         android:id="@+id/btn20"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_toStartOf="@+id/btn21"
         android:textColor="#00000000"
         android:layout_alignParentBottom="true"
@@ -115,10 +152,10 @@
         android:textSize="30sp"
         android:layout_margin="5dp"
         />
-    <Button
+    <TextView
         android:id="@+id/btn21"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:textColor="#00000000"
@@ -127,10 +164,10 @@
         android:background="@drawable/hole"
         android:textSize="30sp" />
 
-    <Button
+    <TextView
         android:id="@+id/btn22"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:layout_marginBottom="30dp"
         android:textColor="#00000000"
         android:textSize="30sp"
@@ -139,16 +176,22 @@
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/btn21"/>
 
-    <Button
+    <TextView
         android:id="@+id/start"
         android:text="Start"
+        android:textColor="#000000"
+        android:background="#844EFD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="15dp"
+        android:textSize="20sp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="5dp"
         tools:ignore="RelativeOverlap" />
 
 </RelativeLayout>
