@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit the Mole</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <h1>Whack the Mole<br>You have 5 chances and two minutes time.</h1>
+    <p>Points : <span id="p">0</span></p>
+    <p>Hearts : <span id="h">5</span></p>
+    <button id="start" onclick="st()">Start</button>
+    <br>
+    <a href="#info">How to play</a>
+    <div class="main_box">
+        <div class="sub_box">
+            <div class="box">
+                <img class="mole" id="1" src="hole.jpg" onclick="hit(1)">
+            </div>
+            <div class="box">
+                <img class="mole" id="2" src="hole.jpg" onclick="hit(2)">
+            </div>
+            <div class="box">
+                <img class="mole" id="3" src="hole.jpg" onclick="hit(3)">
+            </div>
+        </div>
+        <br>
+        <div class="sub_box">
+            <div class="box">
+                <img class="mole" id="4" src="hole.jpg" onclick="hit(4)">
+            </div>
+            <div class="box">
+                <img class="mole" id="5" src="hole.jpg" onclick="hit(5)">
+            </div>
+            <div class="box">
+                <img class="mole" id="6" src="hole.jpg" onclick="hit(6)">
+            </div>
+        </div>
+        <br>
+        <div class="sub_box">
+            <div class="box">
+                <img class="mole" id="7" src="hole.jpg" onclick="hit(7)">
+            </div>
+            <div class="box">
+                <img class="mole" id="8" src="hole.jpg" onclick="hit(8)">
+            </div>
+            <div class="box">
+                <img class="mole" id="9" src="hole.jpg" onclick="hit(9)">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div style="width: 50%; margin-left: 25%; margin-top: 2.5%;">
+        <hr>
+        <h3 id="info">How to Play</h3>
+        <hr>
+        <p>Whack the mole is an old classic game found in different game stations. This is a digital version of the otiginal game that was created. After you hit the start button, moles will pop up through the holes randomly one at a time. If you are not able to hit that mole with your hammer there and miss land the blow, you will lose one of your remaining lives. A timer countdown goes on within which you have hit the specified number of moles. You Win!! </p>
+    </div>
+
+    <script src="mole.js"></script>
+</body>
+</html>
