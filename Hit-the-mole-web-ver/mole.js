@@ -7,7 +7,7 @@ var timer = setInterval(function() {
     if (start=="false"){
         return;
     }
-    if (hearts <= 0 || (performance.now()-b)>=120000){
+    if (hearts <= 0 || (Performance.now()-b)>=120000){
         document.getElementById("start").style.opacity=1;
         document.getElementById("start").innerHTML="Restart";
         start="false";
@@ -39,7 +39,7 @@ function hit (i){
 function st(){
     document.getElementById("start").style.opacity=0;
     start="true";
-    b=(performance.now());
+    b=(Performance.now());
     point=0;
     hearts=5;
 }
